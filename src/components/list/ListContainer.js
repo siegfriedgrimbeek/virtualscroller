@@ -9,7 +9,7 @@ import ListItem from './ListItem'
 import './list.css'
 
 // Generate Fake Data
-const data = fakeData(500000)
+const data = fakeData(100000)
 
 class ListContainer extends Component {
   constructor(props) {

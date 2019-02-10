@@ -9,8 +9,8 @@ const createData = (count) => {
   for (let i = 0; i < count; i++) {
     data.push({
       id: i,
-      name: randomName,
-      email: randomEmail
+      name: faker.name.findName(),
+      email: faker.internet.email()
     })
   }
   return data
