@@ -12,8 +12,8 @@ import './list.css'
 const data = fakeData(100000)
 
 class ListContainer extends Component {
-  constructor(props) {
-    super(props)
+  constructor (props) {
+    super (props)
 
     // Set initial state
     this.state = {
@@ -30,7 +30,7 @@ class ListContainer extends Component {
     this.handleResize = this.handleResize.bind(this)
   }
 
-  componentDidMount() {
+  componentDidMount () {
     const height = document.getElementById('list-container').clientHeight
     const itemCount = Math.trunc(height / this.props.itemheight)
 
@@ -42,7 +42,7 @@ class ListContainer extends Component {
     window.addEventListener('resize', this.handleResize)
   }
 
-  handleResize() {
+  handleResize () {
     const height = document.getElementById('list-container').clientHeight
     const scrollTop = document.getElementById('list-container').scrollTop
     const itemCount = Math.trunc(height / this.props.itemheight)
@@ -56,7 +56,7 @@ class ListContainer extends Component {
     })
   }
 
-  handleScroll() {
+  handleScroll () {
     const scrollTop = document.getElementById('list-container').scrollTop;
     let index = Math.trunc(scrollTop / this.props.itemheight)
 
@@ -70,7 +70,7 @@ class ListContainer extends Component {
     }
   }
 
-  renderRows() {
+  renderRows () {
     let result = []
     for (let i = this.state.start; i <= this.state.end; i++) {
       let listItem = data[i]
@@ -88,12 +88,14 @@ class ListContainer extends Component {
     return result
   }
 
-  render() {
-    return (<div className="list-container" id="list-container" onScroll={this.handleScroll}>
-      <div className="itemContainer" style={this.containerStyle}>
-        {this.renderRows()}
+  render () {
+    return (
+      <div className="list-container" id="list-container" onScroll={this.handleScroll}>
+        <div className="itemContainer" style={this.containerStyle}>
+          {this.renderRows()}
+        </div>
       </div>
-    </div>)
+    )
   }
 }
 
