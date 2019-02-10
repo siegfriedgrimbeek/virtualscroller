@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
+
+.list-container {
+  position: fixed;
+  height: 95%;
+  overflow-y: scroll;
+  width: 25%;
+  min-width: 600px;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.name-field, .contact-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list-header {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.itemContainer {
+  position: absolute;
+  width: 100%;
+  min-width: 500px;
+}
+
+.item {
+  position: absolute;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
