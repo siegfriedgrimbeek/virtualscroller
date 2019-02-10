@@ -2,11 +2,11 @@
 import React, {Component} from 'react'
 
 // Internal Dependancies
-import fakeData from '../helpers/seedData'
+import fakeData from '../../helpers/seedData'
 
 // Import Components
 import ListItem from './ListItem'
-import '../List.css'
+import './list.css'
 
 // Generate Fake Data
 const data = fakeData(500000)

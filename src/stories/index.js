@@ -4,9 +4,9 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 // Import Components
-import ListContainer from '../components/ListContainer'
+import ListContainer from '../components/list/ListContainer'
 
 storiesOf('List Container', module)
   .add('500 000 Records', () => (
   <ListContainer itemheight={70} onScroll={action('scrolled')} />
-));
+))
